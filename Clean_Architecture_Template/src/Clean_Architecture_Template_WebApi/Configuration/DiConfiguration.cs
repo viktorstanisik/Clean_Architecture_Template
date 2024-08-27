@@ -1,9 +1,4 @@
-﻿using Clean_Architecture_Template_Application_Layer.Behaviors;
-using Clean_Architecture_Template_Infrastructure_Layer.Configurations.DiConfigurations;
-using Mapster;
-using MediatR;
-
-namespace Clean_Architecture_Template_WebApi.Configuration
+﻿namespace Clean_Architecture_Template_WebApi.Configuration
 {
     public static class DiConfiguration
     {
@@ -12,8 +7,6 @@ namespace Clean_Architecture_Template_WebApi.Configuration
             ApplicationDiConfiguration.RegisterApplicationServices(services);
 
             InfrastructureDiConfiguration.RegisterInfrastructureServices(services);
-
-
         }
     }
 }

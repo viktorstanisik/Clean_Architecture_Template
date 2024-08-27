@@ -1,4 +1,7 @@
-﻿namespace Clean_Architecture_Template_Infrastructure_Layer.Repositories;
+﻿using Clean_Architecture_Template_Domain_Layer.Abstraction;
+using Clean_Architecture_Template_Domain_Layer.Entities;
+
+namespace Clean_Architecture_Template_Infrastructure_Layer.Repositories;
 
 public class UserRepository(CleanArchitectureTemplateDbContext passwordHasherAppDbContext) : IUserRepository
 {

@@ -1,4 +1,6 @@
-﻿namespace Clean_Architecture_Template_Application.UserFeature.Commands.CreateUser;
+﻿using Clean_Architecture_Template_Domain_Layer.Entities;
+
+namespace Clean_Architecture_Template_Application.UserFeature.Commands.CreateUser;
 
 
 public class CreateUserCommandHandler(IUserRepository userRepository, IPasswordHasher passwordHasher)

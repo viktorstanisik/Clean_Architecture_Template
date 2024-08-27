@@ -1,6 +1,6 @@
-﻿using Clean_Architecture_Template_Domain.Entities;
+﻿using Clean_Architecture_Template_Domain_Layer.Entities;
 
-namespace Clean_Architecture_Template_Domain.Abstraction;
+namespace Clean_Architecture_Template_Domain_Layer.Abstraction;
 
 public interface IUserRepository
 {

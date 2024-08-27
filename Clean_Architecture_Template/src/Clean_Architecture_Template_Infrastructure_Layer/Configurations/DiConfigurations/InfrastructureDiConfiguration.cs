@@ -1,4 +1,5 @@
-﻿using Clean_Architecture_Template_Infrastructure_Layer.Repositories;
+﻿using Clean_Architecture_Template_Domain_Layer.Abstraction;
+using Clean_Architecture_Template_Infrastructure_Layer.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Clean_Architecture_Template_Infrastructure_Layer.Configurations.DiConfigurations;

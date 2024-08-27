@@ -1,6 +1,15 @@
-@Clean_Architecture_Template_WebApi_HostAddress = http://localhost:5087
+@Clean_Architecture_Template_WebApi_HostAddress = http://localhost:7041
 
-GET {{Clean_Architecture_Template_WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{Hash_Api_HostAddress}}/create-user
+Content-Type: application/json
 
-###
+{
+  "userDto": {
+    "email": "viktorstanisic17@gmail.com",
+    "password": "Qwerty1",
+    "city": "Skopje",
+    "streetNo": "Random Street"
+  }
+}
+
+

@@ -11,8 +11,6 @@ global using Clean_Architecture_Template_Application_Layer.DTOs.UserDTOs;
 global using Clean_Architecture_Template_Application_Layer.Implementations;
 global using Clean_Architecture_Template_Domain_Layer.Abstraction;
 global using Clean_Architecture_Template_Domain_Layer.Value_Objects;
-global using Clean_Architecture_Template_Domain.Abstraction;
-global using Clean_Architecture_Template_Domain.Entities;
 global using FluentValidation;
 global using Mapster;
 global using MediatR;

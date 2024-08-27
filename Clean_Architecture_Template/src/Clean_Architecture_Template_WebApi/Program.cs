@@ -1,6 +1,3 @@
-using Clean_Architecture_Template_WebApi.Configuration;
-using Clean_Architecture_Template_WebApi.Middleware;
-
 var builder = WebApplication.CreateBuilder(args);
 DiConfiguration.RegisterServices(builder.Services);
 
@@ -14,7 +11,7 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
 builder.Services.AddDbContext<CleanArchitectureTemplateDbContext>(options =>
-    options.UseInMemoryDatabase(databaseName: "PasswordHasherAppDb"));
+    options.UseInMemoryDatabase(databaseName: "CleanArchitectureTemplateDb"));
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()

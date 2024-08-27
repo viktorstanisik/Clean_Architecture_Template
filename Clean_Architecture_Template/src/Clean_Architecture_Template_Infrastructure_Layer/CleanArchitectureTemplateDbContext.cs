@@ -1,4 +1,6 @@
-﻿namespace Clean_Architecture_Template_Infrastructure_Layer;
+﻿using Clean_Architecture_Template_Domain_Layer.Entities;
+
+namespace Clean_Architecture_Template_Infrastructure_Layer;
 
 public class CleanArchitectureTemplateDbContext(DbContextOptions<CleanArchitectureTemplateDbContext> options) : DbContext(options)
 {

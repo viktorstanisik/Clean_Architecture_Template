@@ -15,7 +15,9 @@ public class PasswordHasherTests
 
         // Assert
         result.Should().NotBeNullOrEmpty();
-        result.Split('-').Length.Should().Be(2, "because the hash and salt are separated by a '-'");
+        result.Split('-').Length
+            .Should()
+            .Be(2, "because the hash and salt are separated by a '-'");
     }
 
     [Fact]

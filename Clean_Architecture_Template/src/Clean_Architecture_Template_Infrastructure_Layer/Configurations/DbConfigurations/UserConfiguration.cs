@@ -1,4 +1,6 @@
-﻿namespace Clean_Architecture_Template_Infrastructure_Layer.Configurations.DbConfigurations;
+﻿using Clean_Architecture_Template_Domain_Layer.Entities;
+
+namespace Clean_Architecture_Template_Infrastructure_Layer.Configurations.DbConfigurations;
 
 public sealed class UserConfiguration : IEntityTypeConfiguration<User>
 {

@@ -1,6 +1,6 @@
 ﻿using Clean_Architecture_Template_Domain_Layer.Value_Objects;
 
-namespace Clean_Architecture_Template_Domain.Entities;
+namespace Clean_Architecture_Template_Domain_Layer.Entities;
 
 public sealed class User(string email, string password, Address address)
 {

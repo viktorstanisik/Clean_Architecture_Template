@@ -1,4 +1,6 @@
-﻿namespace Clean_Architecture_Template_Application_Layer.Mapper;
+﻿using Clean_Architecture_Template_Domain_Layer.Entities;
+
+namespace Clean_Architecture_Template_Application_Layer.Mapper;
 
 public static class MapperConfiguration
 {
