@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Carter" Version="8.2.1" />
+    <PackageReference Include="MediatR" Version="12.4.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.8" />
+    <PackageReference Include="Serilog" Version="4.0.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clean_Architecture_Template_Application\Clean_Architecture_Template_Application_Layer.csproj" />
+    <ProjectReference Include="..\Clean_Architecture_Template_Domain\Clean_Architecture_Template_Domain_Layer.csproj" />
+    <ProjectReference Include="..\Clean_Architecture_Template_Infrastructure_Layer\Clean_Architecture_Template_Infrastructure_Layer.csproj" />
+    <ProjectReference Include="..\Clean_Architecture_Template_Presentation_Layer\Clean_Architecture_Template_Presentation_Layer.csproj" />
+  </ItemGroup>
+
+</Project>
