@@ -5,21 +5,20 @@ VisualStudioVersion = 17.10.35201.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3A045C07-3A87-426C-A5BC-FA19D4E5E74D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "src\Clean_Architecture_Template_Domain_Layer", "src\Clean_Architecture_Template_Domain\Clean_Architecture_Template_Domain_Layer.csproj", "{15A08E37-7B10-4C98-BE62-B715F2CBB6B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\Domain\Domain.csproj", "{15A08E37-7B10-4C98-BE62-B715F2CBB6B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "src\Clean_Architecture_Template_Application_Layer", "src\Clean_Architecture_Template_Application\Clean_Architecture_Template_Application_Layer.csproj", "{F2B5DCBC-8D28-48B3-84A5-7CA32F9D37AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Application\Application.csproj", "{F2B5DCBC-8D28-48B3-84A5-7CA32F9D37AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "src\Clean_Architecture_Template_Infrastructure_Layer", "src\Clean_Architecture_Template_Infrastructure_Layer\Clean_Architecture_Template_Infrastructure_Layer.csproj", "{C56B3BEB-5569-4316-B361-77EBBDA81AF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{C56B3BEB-5569-4316-B361-77EBBDA81AF5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "src\Clean_Architecture_Template_Presentation_Layer", "src\Clean_Architecture_Template_Presentation_Layer\Clean_Architecture_Template_Presentation_Layer.csproj", "{65AA07BC-F493-4FD7-9CC8-18BAB48A25EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation", "src\Presentation\Presentation.csproj", "{65AA07BC-F493-4FD7-9CC8-18BAB48A25EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "src\Clean_Architecture_Template_WebApi", "src\Clean_Architecture_Template_WebApi\Clean_Architecture_Template_WebApi.csproj", "{E0E58B66-B49B-4D48-8B05-99369B1FD180}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "src\WebApi\WebApi.csproj", "{E0E58B66-B49B-4D48-8B05-99369B1FD180}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{93950319-4559-41F6-B6F3-41C9B6B88F7B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tests\Clean_Architecture_Template_Tests", "tests\Clean_Architecture_Template_Tests\Clean_Architecture_Template_Tests.csproj", "{DE10FE49-E727-42BC-8568-683020F6FB88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clean_Architecture_Template_Tests", "tests\Clean_Architecture_Template_Tests\Clean_Architecture_Template_Tests.csproj", "{DE10FE49-E727-42BC-8568-683020F6FB88}"
 EndProject
-
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

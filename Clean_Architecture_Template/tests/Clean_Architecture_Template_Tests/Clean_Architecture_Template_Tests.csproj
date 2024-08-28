@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Clean_Architecture_Template_Application\Clean_Architecture_Template_Application_Layer.csproj" />
-    <ProjectReference Include="..\..\src\Clean_Architecture_Template_Domain\Clean_Architecture_Template_Domain_Layer.csproj" />
+    <ProjectReference Include="..\..\src\Application\Application.csproj" />
+    <ProjectReference Include="..\..\src\Domain\Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
