@@ -1,8 +1,4 @@
-﻿using Application.Behaviors;
-using Application.Implementations;
-using Domain.Abstraction;
-
-namespace Application.Configurations;
+﻿namespace Application.Configurations;
 
 public static class ApplicationDiConfiguration
 {

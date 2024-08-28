@@ -1,8 +1,4 @@
-﻿using Application.DTOs.UserDTOs;
-using Domain.Entities;
-using Domain.Value_Objects;
-
-namespace Application.Mapper;
+﻿namespace Application.Mapper;
 
 public static class MapperConfiguration
 {

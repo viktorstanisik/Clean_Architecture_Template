@@ -1,7 +1,4 @@
-﻿using Application.Implementations;
-using Domain.Abstraction;
-
-namespace Clean_Architecture_Template_Tests.PasswordHasherTests;
+﻿namespace Clean_Architecture_Template_Tests.PasswordHasherTests;
 
 public class PasswordHasherTests
 {

@@ -1,6 +1,4 @@
-﻿using Domain.Value_Objects;
-
-namespace Domain.Entities;
+﻿namespace Domain.Entities;
 
 public sealed class User(string email, string password, Address address)
 {

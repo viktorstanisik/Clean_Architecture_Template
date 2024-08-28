@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace Infrastructure.Configurations.DbConfigurations;
+﻿namespace Infrastructure.Configurations.DbConfigurations;
 
 public sealed class UserConfiguration : IEntityTypeConfiguration<User>
 {

@@ -1,8 +1,4 @@
-﻿using Domain.Abstraction;
-using Infrastructure.Repositories;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace Infrastructure.Configurations.DiConfigurations;
+﻿namespace Infrastructure.Configurations.DiConfigurations;
 
 public static class InfrastructureDiConfiguration
 {

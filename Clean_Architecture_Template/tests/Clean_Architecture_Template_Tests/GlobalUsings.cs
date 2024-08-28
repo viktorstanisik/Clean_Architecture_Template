@@ -1,3 +1,4 @@
 // Global using directives
 
-global using FluentAssertions;
+global using Application.Implementations;
+global using Domain.Abstraction;

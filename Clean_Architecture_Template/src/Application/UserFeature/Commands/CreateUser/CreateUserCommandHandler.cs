@@ -1,7 +1,4 @@
-﻿using Domain.Abstraction;
-using Domain.Entities;
-
-namespace Application.UserFeature.Commands.CreateUser;
+﻿namespace Application.UserFeature.Commands.CreateUser;
 
 
 public class CreateUserCommandHandler(IUserRepository userRepository, IPasswordHasher passwordHasher)

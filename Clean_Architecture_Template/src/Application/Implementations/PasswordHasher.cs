@@ -1,6 +1,4 @@
-﻿using Domain.Abstraction;
-
-namespace Application.Implementations;
+﻿namespace Application.Implementations;
 
 public sealed class PasswordHasher : IPasswordHasher
 {

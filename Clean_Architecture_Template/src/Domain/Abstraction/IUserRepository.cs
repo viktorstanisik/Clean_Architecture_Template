@@ -1,6 +1,4 @@
-﻿using Domain.Entities;
-
-namespace Domain.Abstraction;
+﻿namespace Domain.Abstraction;
 
 public interface IUserRepository
 {

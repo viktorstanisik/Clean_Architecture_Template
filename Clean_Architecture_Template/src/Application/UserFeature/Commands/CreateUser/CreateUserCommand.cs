@@ -1,6 +1,4 @@
-﻿using Application.DTOs.UserDTOs;
-
-namespace Application.UserFeature.Commands.CreateUser;
+﻿namespace Application.UserFeature.Commands.CreateUser;
 
 public class CreateUserCommand(UserDto userDto) : IRequest<bool>
 {
