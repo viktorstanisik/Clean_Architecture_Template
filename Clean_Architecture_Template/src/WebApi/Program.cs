@@ -17,10 +17,12 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("logs/log.txt",
         rollingInterval: RollingInterval.Day,
-        restrictedToMinimumLevel: LogEventLevel.Error)
-    .MinimumLevel.Error()
+        restrictedToMinimumLevel: LogEventLevel.Information)
+    .MinimumLevel.Information()
+    .Enrich.FromLogContext()
     .CreateLogger();
 
+builder.Host.UseSerilog();  // This line ensures that all ILogger<T> logs are routed through Serilog
 
 MapperConfiguration.ConfigureMappings();
 

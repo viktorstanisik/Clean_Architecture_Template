@@ -6,11 +6,13 @@ public static class ApplicationDiConfiguration
     {
         services.AddSingleton(typeof(IPasswordHasher), typeof(PasswordHasher));
 
-        services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+        services.AddSingleton(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
 
-        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ApplicationDiConfiguration).Assembly));
+        services.AddSingleton(typeof(IPipelineBehavior<,>), typeof(LoggingPipelineBehavior<,>));
+
+        services.AddMediatR(cfg =>
+            cfg.RegisterServicesFromAssembly(typeof(ApplicationDiConfiguration).Assembly));
 
         services.AddSingleton(TypeAdapterConfig.GlobalSettings);
-
     }
 }

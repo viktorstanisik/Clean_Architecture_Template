@@ -2,8 +2,8 @@
 
 public class UserDto
 {
-    public string Email { get; set; }
-    public string Password { get; set; }
-    public string City { get; set; }
-    public string StreetNo { get; set; }
+    public required string Email { get; init; }
+    public required string Password { get; init; }
+    public required string City { get; init; }
+    public required string StreetNo { get; init; }
 }

@@ -13,6 +13,11 @@ public class UserFeatureEndpoints : ICarterModule
                 })
             .WithName("CreateUser");
 
+        app.MapPost("/verify-email-hash", async () =>
+        {
+            //some logic
+        }); 
+
 
         //yet to be implemented
         app.MapPost("/login-user", async (string userLogin) =>
