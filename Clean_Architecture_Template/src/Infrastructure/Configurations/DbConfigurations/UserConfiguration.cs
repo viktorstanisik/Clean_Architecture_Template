@@ -6,6 +6,11 @@ public sealed class UserConfiguration : IEntityTypeConfiguration<User>
     {
         builder.HasKey(x => x.Id);
 
+        builder.Property(x => x.Id)
+            .HasConversion(
+                userId => userId.Value,
+                value => new UserId(value));
+
         builder.Property(x => x.Email)
             .HasMaxLength(100)
             .IsRequired();

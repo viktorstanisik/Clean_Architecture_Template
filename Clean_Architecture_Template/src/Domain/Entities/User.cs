@@ -4,7 +4,7 @@ public sealed class User(string email, string password, Address address)
 {
     private User() : this("", "", new Address("", "")) { } // Parameterless constructor for EF Core
 
-    public Guid Id { get; private set; } = SetUserId();
+    public UserId Id { get; } = new(Guid.NewGuid());
 
     public string Email { get; private set; } = email ?? throw new ArgumentNullException(nameof(email));
 
@@ -12,8 +12,10 @@ public sealed class User(string email, string password, Address address)
 
     public Address Address { get; private set; } = address ?? throw new ArgumentNullException(nameof(address));
 
-    private static Guid SetUserId() => Guid.NewGuid();
-    public string UpdateUserPassword(string password) => Password = password;
+    public string UpdateUserPassword(string password)
+    {
+        return Password = password;
+    }
 
     public void UpdateAddress(Address newAddress)
     {
