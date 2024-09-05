@@ -5,7 +5,7 @@ global using Application.DTOs.UserDTOs;
 global using Application.Implementations;
 global using Domain.Abstraction;
 global using Domain.Entities;
-global using Domain.Value_Objects;
+global using Domain.ValueObjects;
 global using FluentValidation;
 global using Mapster;
 global using MediatR;
