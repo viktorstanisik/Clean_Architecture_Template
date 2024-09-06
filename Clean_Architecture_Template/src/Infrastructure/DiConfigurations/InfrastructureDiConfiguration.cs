@@ -1,10 +1,15 @@
-﻿namespace Infrastructure.Configurations.DiConfigurations;
+﻿
+
+namespace Infrastructure.DiConfigurations;
 
 public static class InfrastructureDiConfiguration
 {
     public static void RegisterInfrastructureServices(IServiceCollection services)
     {
-        services.AddScoped<IUserRepository, UserRepository>();
         // Register other infrastructure services here
+
+        services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+
+        services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
     }
 }

@@ -2,7 +2,7 @@
 
 global using Carter;
 global using Infrastructure;
-global using Infrastructure.Configurations.DiConfigurations;
+global using Infrastructure.DiConfigurations;
 global using FluentValidation;
 global using Microsoft.AspNetCore.Diagnostics;
 global using Microsoft.AspNetCore.Mvc;

@@ -1,3 +1,5 @@
+using Infrastructure.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 DiConfiguration.RegisterServices(builder.Services);
 
@@ -10,8 +12,12 @@ builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
+//builder.Services.AddDbContext<CleanArchitectureTemplateDbContext>(options =>
+//    options.UseInMemoryDatabase(databaseName: "CleanArchitectureTemplateDb"));
+
 builder.Services.AddDbContext<CleanArchitectureTemplateDbContext>(options =>
-    options.UseInMemoryDatabase(databaseName: "CleanArchitectureTemplateDb"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DatabaseConnectionString")));
+
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()

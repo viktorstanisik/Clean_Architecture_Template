@@ -1,4 +1,6 @@
-﻿namespace WebApi.Configuration
+﻿using Infrastructure.DiConfigurations;
+
+namespace WebApi.Configuration
 {
     public static class DiConfiguration
     {

@@ -7,8 +7,10 @@ public static class ApplicationDiConfiguration
         services.AddSingleton(typeof(IPasswordHasher), typeof(PasswordHasher));
 
         services.AddSingleton(typeof(IPipelineBehavior<,>), typeof(ValidationPipelineBehavior<,>));
-
+         
         services.AddSingleton(typeof(IPipelineBehavior<,>), typeof(LoggingPipelineBehavior<,>));
+
+        services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionPipelineBehavior<,>));
 
         services.AddMediatR(cfg =>
             cfg.RegisterServicesFromAssembly(typeof(ApplicationDiConfiguration).Assembly));

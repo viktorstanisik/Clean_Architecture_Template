@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Configurations.DbConfigurations;
+﻿namespace Infrastructure.Persistence.DbConfigurations;
 
 public sealed class UserConfiguration : IEntityTypeConfiguration<User>
 {

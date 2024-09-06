@@ -1,4 +1,4 @@
-﻿namespace Infrastructure;
+﻿namespace Infrastructure.Persistence;
 
 public class CleanArchitectureTemplateDbContext(DbContextOptions<CleanArchitectureTemplateDbContext> options) : DbContext(options)
 {
