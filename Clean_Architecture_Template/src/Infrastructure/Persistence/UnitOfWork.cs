@@ -9,14 +9,10 @@ public class UnitOfWork(CleanArchitectureTemplateDbContext dbContext) : IUnitOfW
         return await _dbContext.Database.BeginTransactionAsync(cancellationToken);
 
     }
-
-    // Save the changes in DbContext
     public async Task SaveChangesAsync(CancellationToken cancellationToken)
     {
         await _dbContext.SaveChangesAsync(cancellationToken);
     }
-
-    // Dispose of the DbContext
     public void Dispose()
     {
         _dbContext.Dispose();
