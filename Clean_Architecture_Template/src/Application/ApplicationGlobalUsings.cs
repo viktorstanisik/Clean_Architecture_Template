@@ -11,3 +11,7 @@ global using Mapster;
 global using MediatR;
 global using Microsoft.Extensions.DependencyInjection;
 global using System.Security.Cryptography;
+global using Microsoft.EntityFrameworkCore.Storage;
+global using Domain.Common;
+global using Microsoft.Extensions.Logging;
+global using System.Reflection;

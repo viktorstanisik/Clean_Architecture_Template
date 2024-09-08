@@ -29,21 +29,28 @@ public class UserRepository(CleanArchitectureTemplateDbContext passwordHasherApp
 
     }
 
-    public async Task<User> Login(User user)
+    public async Task<Result<User>> Login(User user)
     {
-        var dbUser = await GetUser(user.Email);
+        var dbUser = await GetUserByEmail(user.Email);
 
-        if (dbUser == null)
+        if (!dbUser.Success)
         {
-            throw new Exception("User Not Found");
+            return Result<User>.CreateFailure("User Not Found");
         }
 
-        return dbUser;
+        return Result<User>.CreateSuccess(user);
     }
 
-    public async Task<User> GetUser(string email)
+    public async Task<Result<User>> GetUserByEmail(string email)
     {
-        return await passwordHasherAppDbContext.Users.FirstOrDefaultAsync(x => x.Email.Equals(email));
+        var user = await passwordHasherAppDbContext.Users.FirstOrDefaultAsync(x => x.Email.Equals(email));
 
+        if (user is null)
+        {
+            return Result<User>.CreateFailure("User Not Found");
+        }
+
+        // Return the found user
+        return Result<User>.CreateSuccess(user);
     }
 }

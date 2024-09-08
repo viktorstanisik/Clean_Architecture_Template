@@ -10,3 +10,4 @@ global using Microsoft.EntityFrameworkCore.Metadata.Builders;
 global using Microsoft.Extensions.DependencyInjection;
 global using Serilog;
 global using Microsoft.EntityFrameworkCore.Storage;
+global using Domain.Common;

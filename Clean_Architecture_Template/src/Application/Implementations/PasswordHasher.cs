@@ -12,6 +12,7 @@ public sealed class PasswordHasher : IPasswordHasher
     private const int Itterations = 100000;
 
     private static readonly HashAlgorithmName Algorithm = HashAlgorithmName.SHA512;
+
     public string GenerateHash(string password)
     {
         byte[] salt = RandomNumberGenerator.GetBytes(SaltSize);

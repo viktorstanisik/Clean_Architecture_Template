@@ -1,6 +1,6 @@
 ﻿namespace Application.Behaviors;
 
-public class LoggingPipelineBehavior<TRequest, TResponse>(
+internal sealed class LoggingPipelineBehavior<TRequest, TResponse>(
     ILogger<LoggingPipelineBehavior<TRequest, TResponse>> logger)
     : IPipelineBehavior<TRequest, TResponse>
     where TRequest : class

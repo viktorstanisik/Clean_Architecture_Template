@@ -1,4 +1,6 @@
-﻿namespace Presentation.Endpoints;
+﻿using Domain.Common;
+
+namespace Presentation.Endpoints;
 
 public class UserFeatureEndpoints : ICarterModule
 {
@@ -8,8 +10,9 @@ public class UserFeatureEndpoints : ICarterModule
                 async (CreateUserCommand command,
                     IMediator mediator) =>
                 {
-                    var result = await mediator.Send(command);
-                    return Results.Ok(result);
+                    Result<bool> result = await mediator.Send(command);
+
+                    return result;
                 })
             .WithName("CreateUser");
 

@@ -1,17 +1,33 @@
-﻿namespace Application.UserFeature.Commands.CreateUser;
-
-
-public class CreateUserCommandHandler(IUserRepository userRepository, IPasswordHasher passwordHasher)
-    : IRequestHandler<CreateUserCommand, bool>
+﻿
+namespace Application.UserFeature.Commands.CreateUser;
+internal sealed class CreateUserCommandHandler(IUserRepository userRepository, IPasswordHasher passwordHasher)
+    : IRequestHandler<CreateUserCommand, Result<bool>>
 {
-    public async Task<bool> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    public async Task<Result<bool>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
-        var user = request.UserDto.Adapt<User>();
+        try
+        {
+            Result<User> userAlreadyExist = await userRepository.GetUserByEmail(request.UserDto.Email);
 
-        user.UpdateUserPassword(passwordHasher.GenerateHash(request.UserDto.Password));
+            if (userAlreadyExist.Success)
+            {
+                return Result<bool>.CreateFailure("User already exists.");
+            }
 
-        var userCreated = await userRepository.CreateUser(user);
+            // Map DTO to domain entity
+            var user = request.UserDto.Adapt<User>();
 
-        return userCreated;
+            // Hash the password before updating the user entity
+            user.UpdateUserPassword(passwordHasher.GenerateHash(request.UserDto.Password));
+
+            var userCreated = await userRepository.CreateUser(user);
+
+            return Result<bool>.CreateSuccess(userCreated);
+        }
+        catch (Exception e)
+        {
+            return Result<bool>.CreateFailure(e.Message);
+
+        }
     }
 }
