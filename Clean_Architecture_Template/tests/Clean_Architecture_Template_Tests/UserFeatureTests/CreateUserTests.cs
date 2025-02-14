@@ -32,7 +32,11 @@ public class CreateUserTests
         var userDto = CreateUserDto();
 
         var command = new CreateUserCommand(userDto);
+        command.UserDto = userDto;
 
+        // Mocking the GetUserByEmail
+
+        command
         _userRepository.GetUserByEmail(userDto.Email)
             .Returns(Result<User>.CreateSuccess(new User(userDto.Email, userDto.Password,
                 new Address(userDto.City, userDto.StreetNo))));
