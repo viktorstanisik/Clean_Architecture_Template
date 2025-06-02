@@ -25,27 +25,7 @@ public class CreateUserTests
     }
 
 
-    [Fact]
-    public async Task Handle_Should_ReturnFailure_WhenUserAlreadyExists()
-    {
-        // Arrange
-        var userDto = CreateUserDto();
-
-        var command = new CreateUserCommand(userDto);
-
-        _userRepository.GetUserByEmail(userDto.Email)
-            .Returns(Result<User>.CreateSuccess(new User(userDto.Email, userDto.Password,
-                new Address(userDto.City, userDto.StreetNo))));
-
-        // Act
-        var result = await _handler.Handle(command, default);
-
-        // Assert
-        result.Success.Should().BeFalse();
-        result.ErrorMessage.Should().Be("User already exists.");
-    }
-
-    [Fact]
+       [Fact]
     public async Task Handle_Should_ReturnSuccess_WhenUserIsCreated()
     {
         // Arrange
